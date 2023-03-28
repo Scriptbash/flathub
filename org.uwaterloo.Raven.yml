@@ -1,0 +1,18 @@
+app-id: org.uwaterloo.Raven
+runtime: org.freedesktop.Platform
+runtime-version: '22.08'
+sdk: org.freedesktop.Sdk
+command: Raven.exe
+finish-args:
+  - --filesystem=home
+modules:
+  - name: raven
+    buildsystem: simple
+    build-commands:
+      - make
+      - install -D Raven.exe /app/bin/Raven.exe
+      - chmod +x /app/bin/Raven.exe
+    sources:
+      - type: archive
+        url: http://raven.uwaterloo.ca/files/v3.6/RavenSource_v3.6.zip
+        sha256: a962f3377425868d9cc535b6858e0457f5307636f99466ee37ab66ecfbcaf35c
