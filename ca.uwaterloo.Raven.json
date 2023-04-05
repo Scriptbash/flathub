@@ -8,6 +8,15 @@
   [
     "--filesystem=home"
   ],
+  "cleanup": [
+    "/lib/pkgconfig",
+    "/lib/*.la",
+    "/lib/*.a",
+    "/lib/*.settings",
+    "/lib/debug",
+    "/include",
+    "/share"
+],
   "modules": 
   [
     {
